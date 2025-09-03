@@ -68,9 +68,13 @@ export class MailgunClient extends SimpleNotificationBaseClient {
     if (email.text) formData.append("text", email.text);
     if (email.attachments) {
       email.attachments.forEach((attachment) => {
+        const attachmentPart =
+          typeof attachment.content === "string"
+            ? attachment.content
+            : new Uint8Array(attachment.content);
         formData.append(
           "attachment",
-          new Blob([attachment.content]),
+          new Blob([attachmentPart]),
           attachment.filename
         );
       });

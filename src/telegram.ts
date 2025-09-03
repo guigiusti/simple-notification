@@ -65,7 +65,8 @@ export class TelegramClient extends SimpleNotificationBaseClient {
   ): Promise<SimpleNotificationResponse> {
     const formData = new FormData();
     formData.append("chat_id", this.channelId);
-    formData.append("photo", new Blob([photo]), "image");
+    const photoPart = photo instanceof Blob ? photo : new Uint8Array(photo);
+    formData.append("photo", new Blob([photoPart]), "image");
     if (caption) formData.append("caption", caption);
 
     return this.request("sendPhoto", formData, true);
@@ -87,7 +88,9 @@ export class TelegramClient extends SimpleNotificationBaseClient {
   ): Promise<SimpleNotificationResponse> {
     const formData = new FormData();
     formData.append("chat_id", this.channelId);
-    formData.append("document", new Blob([document]), filename);
+    const documentPart =
+      document instanceof Blob ? document : new Uint8Array(document);
+    formData.append("document", new Blob([documentPart]), filename);
     if (caption) formData.append("caption", caption);
     return this.request("sendDocument", formData, true);
   }
