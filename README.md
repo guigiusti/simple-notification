@@ -1,12 +1,12 @@
 # Simple Notification - Javascript
 
-You know that moment you just want to know when something happened in your services? Like user subscription events, downtime, a specific error, you name it. Imagine getting notifications like this directly in your pocket via something like Discord or Telegram. Or in your team Clickup or Slack chat.
+You know those moments you just need to know when something happened in your services? Like a new user subscription, downtime, a specific error, you name it. Imagine getting notifications like this directly in your pocket on Discord or Telegram, or in your team Clickup or Slack chat.
 
-What if you want to send this message in multiple chats on different platforms, or even send an email with attachments through a service like Mailgun or Resend at the same time.
+What if you want to send this message in multiple chats on different platforms, or even send an email with attachments through a service like Mailgun or Resend at the same time?
 
-Simple Notification\* tries to make this easier, instead of downloading multiple SDKs or implementing the API call yourself, now you can download one simple package and have an easy way to send a message or an e-mail through different services.
+Simple Notification\* make this easier, instead of installing several SDKs or writing API calls by yourself, now you can install one simple package and have an easy way to send a message or an e-mail through different services.
 
-\*Lacking features, still in development. Basic usage already available
+\*Lacking features, still in development. Basic usage available.
 
 ## Table of Contents
 
@@ -31,7 +31,7 @@ Note: The package is not yet published, treat this as an early version.
 You can download it via NPM
 
 ```
-npm install https://github.com/guigiusti/simple-notification
+npm install https://github.com/guigiusti/simple-notification-js
 
 ```
 
