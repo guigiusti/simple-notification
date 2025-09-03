@@ -1,0 +1,65 @@
+{
+  "name": "simple-notification",
+  "version": "0.0.1",
+  "description": "Simple notification service",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guigiusti/simple-notification"
+  },
+  "license": "MIT",
+  "author": "Guilherme Giusti",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./telegram": {
+      "types": "./dist/telegram.d.ts",
+      "default": "./dist/telegram.js"
+    },
+    "./discord": {
+      "types": "./dist/discord.d.ts",
+      "default": "./dist/discord.js"
+    },
+    "./slack": {
+      "types": "./dist/slack.d.ts",
+      "default": "./dist/slack.js"
+    },
+    "./clickup": {
+      "types": "./dist/clickup.d.ts",
+      "default": "./dist/clickup.js"
+    },
+    "./mailgun": {
+      "types": "./dist/mailgun.d.ts",
+      "default": "./dist/mailgun.js"
+    },
+    "./resend": {
+      "types": "./dist/resend.d.ts",
+      "default": "./dist/resend.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "default": "./dist/client.js"
+    }
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.2"
+  }
+}
