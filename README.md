@@ -30,14 +30,14 @@ Note: The package is not yet published, treat this as an early version.
 
 You can download it via NPM
 
-```
+```sh
 npm install https://github.com/guigiusti/simple-notification-js
 
 ```
 
 Or via Bun:
 
-```
+```sh
 bun add https://github.com/guigiusti/simple-notification-js
 
 # For now this is not coming from a package registry, so you will probably also need to run:
@@ -50,7 +50,7 @@ bun pm trust simple-notification
 
 ## Example Usage
 
-```
+```js
 import { TelegramClient } from "simple-notification";
 
 const client = new TelegramClient();
@@ -74,7 +74,7 @@ client.sendMessage("Hello, world!");
 
 Usage on typescript is natively supported. You can also create a custom client by importing the base class and response type.
 
-```
+```js
 import { SimpleNotificationBaseClient } from "simple-notification";
 import type { SimpleNotificationResponse } from "simple-notification";
 
