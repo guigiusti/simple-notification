@@ -52,13 +52,14 @@
     "LICENSE"
   ],
   "engines": {
-    "node": ">=18"
+    "node": ">=18",
+    "bun": ">=1.0.0"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "prepare": "npm run build"
+    "prepare": "tsc -p tsconfig.build.json"
   },
-  "devDependencies": {
+  "dependencies": {
     "@types/node": "^24.3.0",
     "typescript": "^5.9.2"
   }
