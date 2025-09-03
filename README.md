@@ -66,7 +66,7 @@ client.sendMessage("Hello, world!");
 | Slack             | SlackClient             | SLACK_BOT_TOKEN, SLACK_CHANNEL                            |
 | Discord (bot)     | DiscordBotClient        | DISCORD_BOT_TOKEN, DISCORD_CHANNEL_ID                     |
 | Discord (webhook) | DiscordWebhookClient    | DISCORD_WEBHOOK_URL                                       |
-| ClickUp           | ClickUpClient (future?) | CLICKUP_API_KEY, CLICKUP_WORKSPACE_ID, CLICKUP_CHANNEL_ID |
+| ClickUp           | ClickUpClient           | CLICKUP_API_KEY, CLICKUP_WORKSPACE_ID, CLICKUP_CHANNEL_ID |
 | Mailgun           | MailgunClient           | MAILGUN_API_KEY, MAILGUN_DOMAIN                           |
 | Resend            | ResendClient            | RESEND_API_KEY                                            |
 
